@@ -21,7 +21,11 @@ const Pokemones = () => {
 	}, []);
 
   const detalle = () => {
+    if(pokemonSelect) {
       navigate(`/pokemones/${pokemonSelect}`)
+    }else{
+      alert("Debes seleccionar un Pokemon")
+    }
   }
 
 	console.log(pokemones);
@@ -31,7 +35,7 @@ const Pokemones = () => {
 				<h1>Selecciona un pokemon</h1>
 				<div className="col-5 col-sm-3  col-lg-2 mx-auto ">
 					<select onChange={(e)=>setPokemonSelect(e.target.value)} value={pokemonSelect}>
-						<option disabled >Pokemones</option>
+						<option disabled value="" >Pokemones</option>
 						{pokemones.map((pokemon) => (
 							<option key={pokemones.name} value={pokemon.name}>{pokemon.name}</option>
 						))}
