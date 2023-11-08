@@ -1,7 +1,7 @@
 import { Card } from "react-bootstrap";
 
 const PokemonCard = ({ pokemon }) => {
-  const { name, stats, src, types } = pokemon;
+  const { name, stats, image, types } = pokemon;
   return (
     <Card
       style={{ width: "34rem" }}
@@ -10,11 +10,11 @@ const PokemonCard = ({ pokemon }) => {
       <Card.Img
         height="300"
         variant="top"
-        src={src}
+        src={image}
       />
       <Card.Body>
         <Card.Title className="fw-bold">{name}</Card.Title>
-        <ul className="text-left">
+        {/* <ul className="text-left">
           <Card.Text>
             {stats?.map((stat, i) => (
               <li key={i}>
@@ -23,7 +23,7 @@ const PokemonCard = ({ pokemon }) => {
             ))}
           </Card.Text>
         </ul>
-        <Card.Text className="text-secondary">{types}</Card.Text>
+        <Card.Text className="text-secondary">{types}</Card.Text> */}
       </Card.Body>
     </Card>
   );

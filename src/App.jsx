@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Menu from "./components/Menu";
 import Home from "./views/Home";
+import Detalle from "./views/Detalle";
 import Pokemones from "./views/Pokemones";
 
 const App = () => {
@@ -12,6 +13,7 @@ const App = () => {
         {/* DEFINIR LAS RUTAS HOME, POKEMONES, DETALLE */}
         <Route path="/" element={<Home />} />
         <Route path="/pokemones" element={<Pokemones />} />
+        <Route path="/pokemones/:name" element={<Detalle />} />
       </Routes>
     </div>
   );
